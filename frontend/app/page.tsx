@@ -1,12 +1,15 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import CopyEmail from "@/components/CopyEmail";
+import AiStoryCard from "@/components/AiStoryCard";
 import Game from "@/components/Game";
 import ProjectCard from "@/components/ProjectCard";
+import { getAiStory } from "@/lib/aiNews";
 import { getContent } from "@/lib/api";
 
 export default async function Home() {
   const { profile, experience, skills, projects, game } = await getContent();
   const { links } = profile;
+  const story = await getAiStory();
 
   return (
     <>
@@ -94,6 +97,7 @@ export default async function Home() {
           <div className="max-w-xl">
             <h3 className="text-xl">{game.title}</h3>
             <p className="mt-2 mb-6 text-muted">{game.intro}</p>
+            {story && <AiStoryCard story={story} email={links.email} />}
             <Game game={game} email={links.email} />
           </div>
         </div>
