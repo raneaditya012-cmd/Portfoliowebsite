@@ -28,3 +28,8 @@ experience as a `git log` that draws on scroll · contact form with a live reque
 keepy-uppy mini-game in the hobbies section · smooth scrolling · respects `prefers-reduced-motion`.
 
 Theme colours live in `frontend/tailwind.config.ts` (`bg`, `surface`, `fg`, `muted`, `accent`).
+
+## Deploy (free)
+1. **API → Render:** New → Blueprint → pick this repo (uses `render.yaml`). Copy the service URL.
+2. **Site → Vercel:** Import this repo, set *Root Directory* to `frontend`, add env var `API_URL` = the Render URL, deploy.
+   (The site also works without the API — content falls back to `lib/fallback.json`; only the contact form needs it.)
