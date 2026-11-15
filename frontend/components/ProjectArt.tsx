@@ -181,8 +181,30 @@ function Donation() {
   );
 }
 
+function Chat() {
+  return (
+    <Frame label="A chat conversation guiding a customer to a booked travel insurance policy">
+      <rect x="32" y="46" width="214" height="40" rx="12" fill="#15181d" stroke={C} strokeOpacity=".6" strokeWidth="1.5" />
+      <text x="46" y="71" fontFamily="monospace" fontSize="12" fill={C}>Where are you travelling?</text>
+      <rect x="196" y="100" width="172" height="40" rx="12" fill={L} fillOpacity=".18" stroke={L} strokeWidth="1.5" />
+      <text x="210" y="125" fontFamily="monospace" fontSize="12" fill={C}>Singapore · 5 days</text>
+      <rect x="32" y="154" width="250" height="40" rx="12" fill="#15181d" stroke={C} strokeOpacity=".6" strokeWidth="1.5" />
+      <text x="46" y="179" fontFamily="monospace" fontSize="12" fill={C}>Here is the best plan for you</text>
+      {[0, 1, 2].map((i) => <circle key={i} cx={46 + i * 14} cy="226" r="4" fill={C} className="a-pulse" style={{ animationDelay: `${i * 0.25}s` }} />)}
+      <g transform="translate(262 226)">
+        <g className="a-bob">
+          <rect x="-12" y="-18" width="112" height="36" rx="18" fill="#15181d" stroke={L} />
+          <circle cx="8" r="9" fill={L} /><path d="M3 0l4 4 7-8" stroke="#0d0e11" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <text x="24" y="4" fontFamily="monospace" fontSize="10" fill={C}>BOOKED</text>
+        </g>
+      </g>
+    </Frame>
+  );
+}
+
 export default function ProjectArt({ slug }: { slug: string }) {
   switch (slug) {
+    case "travel-insurance-chatbot": return <Chat />;
     case "petroconnect": return <Petro />;
     case "aegis-mas": return <Aegis />;
     case "customer-behaviour-analytics": return <Analytics />;

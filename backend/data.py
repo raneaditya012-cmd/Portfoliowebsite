@@ -2,7 +2,7 @@
 
 PROFILE = {
     "name": "Aditya Rane",
-    "role": "Software Engineer",
+    "role": "Software Engineer · ICICI Lombard",
     "location": "Mumbai, India",
     "tagline": "I build intelligent, scalable systems — from ESP32 firmware to drone swarms to the cloud.",
     "summary": (
@@ -34,6 +34,17 @@ SKILLS = [
 ]
 
 PROJECTS = [
+    {
+        "slug": "travel-insurance-chatbot", "status": "Live in production", "title": "Travel Insurance Chatbot", "kind": "Conversational AI · Fintech",
+        "blurb": "A live chatbot at ICICI Lombard that guides customers through booking a travel insurance policy.",
+        "story": "Built as a software engineer at ICICI Lombard: a conversational flow that takes customers from "
+                 "questions to a booked travel insurance policy, running live on the company website.",
+        "highlights": ["Live in production on icicilombard.com", "Conversational policy-booking journey",
+                       "Built and maintained as part of my role at ICICI Lombard"],
+        "stack": ["Chatbot", "Web", "Insurance", "Production"],
+        "stats": {"Status": "Live", "Domain": "Insurance", "Company": "ICICI Lombard"},
+        "featured": True, "links": {"live": "https://www.icicilombard.com/travel-buying-chat/conversation"},
+    },
     {
         "slug": "petroconnect", "status": "Published · IEEE", "title": "PetroConnect", "kind": "IoT · Embedded",
         "blurb": "IEEE-published automated fueling system with RFID authentication, ESP32 hardware and a MERN dashboard.",
@@ -87,7 +98,7 @@ PROJECTS = [
 ]
 
 TIMELINE = [
-    {"year": "now", "ref": "HEAD -> main", "title": "Software Engineer", "text": "Building across full-stack, cloud, data and autonomous systems."},
+    {"year": "now", "ref": "HEAD -> main", "title": "Software Engineer — ICICI Lombard", "text": "Built the live travel-insurance buying chatbot. Building across full-stack, cloud, data and autonomous systems."},
     {"year": "research", "ref": "tag: ieee", "title": "IEEE Publication — PetroConnect", "text": "IoT automated fueling system, published in IEEE."},
     {"year": "internship", "ref": "", "title": "The Sparks Foundation", "text": "Built a Razorpay-powered donation platform."},
     {"year": "degree", "ref": "origin", "title": "B.Tech, Electronics & Telecommunication", "text": "The hardware-meets-software foundation."},

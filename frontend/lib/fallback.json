@@ -1,7 +1,7 @@
 {
  "profile": {
   "name": "Aditya Rane",
-  "role": "Software Engineer",
+  "role": "Software Engineer \u00b7 ICICI Lombard",
   "location": "Mumbai, India",
   "tagline": "I build intelligent, scalable systems \u2014 from ESP32 firmware to drone swarms to the cloud.",
   "summary": "B.Tech in Electronics & Telecommunication Engineering. I work at the intersection of software engineering, AI, robotics and autonomous technologies \u2014 full-stack, backend, cloud, data engineering, IoT and embedded systems.",
@@ -94,6 +94,34 @@
   }
  ],
  "projects": [
+  {
+   "slug": "travel-insurance-chatbot",
+   "status": "Live in production",
+   "title": "Travel Insurance Chatbot",
+   "kind": "Conversational AI \u00b7 Fintech",
+   "blurb": "A live chatbot at ICICI Lombard that guides customers through booking a travel insurance policy.",
+   "story": "Built as a software engineer at ICICI Lombard: a conversational flow that takes customers from questions to a booked travel insurance policy, running live on the company website.",
+   "highlights": [
+    "Live in production on icicilombard.com",
+    "Conversational policy-booking journey",
+    "Built and maintained as part of my role at ICICI Lombard"
+   ],
+   "stack": [
+    "Chatbot",
+    "Web",
+    "Insurance",
+    "Production"
+   ],
+   "stats": {
+    "Status": "Live",
+    "Domain": "Insurance",
+    "Company": "ICICI Lombard"
+   },
+   "featured": true,
+   "links": {
+    "live": "https://www.icicilombard.com/travel-buying-chat/conversation"
+   }
+  },
   {
    "slug": "petroconnect",
    "status": "Published \u00b7 IEEE",
@@ -247,8 +275,8 @@
   {
    "year": "now",
    "ref": "HEAD -> main",
-   "title": "Software Engineer",
-   "text": "Building across full-stack, cloud, data and autonomous systems."
+   "title": "Software Engineer \u2014 ICICI Lombard",
+   "text": "Built the live travel-insurance buying chatbot. Building across full-stack, cloud, data and autonomous systems."
   },
   {
    "year": "research",
