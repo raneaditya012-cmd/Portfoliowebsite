@@ -1,11 +1,12 @@
 export type Profile = {
-  name: string; role: string; location: string; tagline: string; summary: string;
-  interests: string[]; links: { github: string; linkedin: string; email: string; resume: string };
+  name: string; role: string; company: string; location: string; intro: string;
+  about: string[]; outside: string; facts: [string, string][];
+  links: { github: string; linkedin: string; email: string };
 };
-export type SkillGroup = { group: string; items: string[]; note: string };
+export type Experience = { label: string; title: string; org: string; text: string; link: { label: string; href: string } | null };
+export type SkillGroup = { group: string; items: string[] };
 export type Project = {
-  slug: string; status: string; title: string; kind: string; blurb: string; story: string;
-  highlights: string[]; stack: string[]; stats: Record<string, string>; featured: boolean; links: Record<string, string>;
+  slug: string; title: string; kind: string; status: string; blurb: string; overview: string;
+  highlights: string[]; stack: string[]; links: Record<string, string>;
 };
-export type TimelineItem = { year: string; ref: string; title: string; text: string };
-export type Hobby = { icon: string; title: string; text: string };
+export type Content = { profile: Profile; experience: Experience[]; skills: SkillGroup[]; projects: Project[] };

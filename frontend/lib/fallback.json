@@ -1,317 +1,215 @@
 {
- "profile": {
-  "name": "Aditya Rane",
-  "role": "Software Engineer \u00b7 ICICI Lombard",
-  "location": "Mumbai, India",
-  "tagline": "I build intelligent, scalable systems \u2014 from ESP32 firmware to drone swarms to the cloud.",
-  "summary": "B.Tech in Electronics & Telecommunication Engineering. I work at the intersection of software engineering, AI, robotics and autonomous technologies \u2014 full-stack, backend, cloud, data engineering, IoT and embedded systems.",
-  "interests": [
-   "Software Engineering",
-   "AI & Agentic Systems",
-   "Autonomous Robotics",
-   "Distributed Systems",
-   "IoT",
-   "System Architecture"
-  ],
-  "links": {
-   "github": "https://github.com/",
-   "linkedin": "https://linkedin.com/",
-   "email": "mailto:you@example.com",
-   "resume": "/resume.pdf"
-  }
- },
- "skills": [
-  {
-   "group": "languages",
-   "items": [
-    "Python",
-    "C++",
-    "JavaScript"
-   ],
-   "note": "Day-to-day languages across backend, embedded and web."
-  },
-  {
-   "group": "frontend",
-   "items": [
-    "React"
-   ],
-   "note": "Component-driven interfaces."
-  },
-  {
-   "group": "backend",
-   "items": [
-    "Node.js",
-    "Express",
-    "REST APIs"
-   ],
-   "note": "APIs and services."
-  },
-  {
-   "group": "data",
-   "items": [
-    "MongoDB",
-    "PostgreSQL",
-    "ETL pipelines",
-    "Data warehousing"
-   ],
-   "note": "Modelling, pipelines and analytics."
-  },
-  {
-   "group": "cloud",
-   "items": [
-    "AWS"
-   ],
-   "note": "Ingestion, storage and compute."
-  },
-  {
-   "group": "iot-embedded",
-   "items": [
-    "ESP32",
-    "RFID",
-    "Secure device comms"
-   ],
-   "note": "Hardware that talks to software."
-  },
-  {
-   "group": "robotics",
-   "items": [
-    "ROS 2",
-    "PX4",
-    "Gazebo"
-   ],
-   "note": "Autonomy stack and simulation."
-  },
-  {
-   "group": "exploring",
-   "items": [
-    "System design",
-    "Distributed architectures",
-    "Agentic AI",
-    "Multi-agent systems",
-    "Human-machine interaction"
-   ],
-   "note": "What I read and tinker with."
-  }
- ],
- "projects": [
-  {
-   "slug": "travel-insurance-chatbot",
-   "status": "Live in production",
-   "title": "Travel Insurance Chatbot",
-   "kind": "Conversational AI \u00b7 Fintech",
-   "blurb": "A live chatbot at ICICI Lombard that guides customers through booking a travel insurance policy.",
-   "story": "Built as a software engineer at ICICI Lombard: a conversational flow that takes customers from questions to a booked travel insurance policy, running live on the company website.",
-   "highlights": [
-    "Live in production on icicilombard.com",
-    "Conversational policy-booking journey",
-    "Built and maintained as part of my role at ICICI Lombard"
-   ],
-   "stack": [
-    "Chatbot",
-    "Web",
-    "Insurance",
-    "Production"
-   ],
-   "stats": {
-    "Status": "Live",
-    "Domain": "Insurance",
-    "Company": "ICICI Lombard"
-   },
-   "featured": true,
-   "links": {
-    "live": "https://www.icicilombard.com/travel-buying-chat/conversation"
-   }
-  },
-  {
-   "slug": "petroconnect",
-   "status": "Published \u00b7 IEEE",
-   "title": "PetroConnect",
-   "kind": "IoT \u00b7 Embedded",
-   "blurb": "IEEE-published automated fueling system with RFID authentication, ESP32 hardware and a MERN dashboard.",
-   "story": "Fueling stations rely on manual verification. PetroConnect authenticates users via RFID, talks to an ESP32 controller over a secured channel, and surfaces everything in a MERN web app.",
-   "highlights": [
-    "RFID-based user authentication",
-    "ESP32 firmware with secure device communication",
-    "MERN-stack monitoring web app",
-    "Peer-reviewed & published by IEEE"
-   ],
-   "stack": [
-    "ESP32",
-    "RFID",
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Express"
-   ],
-   "stats": {
-    "Published": "IEEE",
-    "Layers": "HW + Web",
-    "Auth": "RFID"
-   },
-   "featured": true,
-   "links": {
-    "paper": "#",
-    "code": "#"
-   }
-  },
-  {
-   "slug": "aegis-mas",
-   "status": "In progress",
-   "title": "Aegis-MAS",
-   "kind": "Autonomous Robotics",
-   "blurb": "Autonomous drone swarm exploring multi-agent communication and distributed decision-making.",
-   "story": "A swarm that plans missions and coordinates without a central brain \u2014 agents negotiate tasks, share state and adapt, simulated in Gazebo with PX4 and ROS 2.",
-   "highlights": [
-    "Multi-agent communication",
-    "Distributed decision-making",
-    "Mission planning & coordination",
-    "Simulation-first workflow (Gazebo + PX4)"
-   ],
-   "stack": [
-    "ROS 2",
-    "PX4",
-    "Gazebo",
-    "Python",
-    "C++"
-   ],
-   "stats": {
-    "Agents": "Swarm",
-    "Sim": "Gazebo",
-    "Stack": "ROS 2"
-   },
-   "featured": true,
-   "links": {
-    "code": "#"
-   }
-  },
-  {
-   "slug": "customer-behaviour-analytics",
-   "status": "Completed",
-   "title": "Customer Behaviour Analytics",
-   "kind": "Data Engineering",
-   "blurb": "AWS data platform: ingestion, ETL pipelines, warehousing and analytics.",
-   "story": "End-to-end pipeline that ingests raw behavioural events, transforms them through ETL, lands them in a warehouse and exposes analytics.",
-   "highlights": [
-    "Event ingestion on AWS",
-    "ETL pipelines",
-    "Data warehouse modelling",
-    "Analytics layer"
-   ],
-   "stack": [
-    "AWS",
-    "Python",
-    "SQL",
-    "ETL",
-    "Data Warehouse"
-   ],
-   "stats": {
-    "Cloud": "AWS",
-    "Flow": "ETL",
-    "Output": "Analytics"
-   },
-   "featured": false,
-   "links": {
-    "code": "#"
-   }
-  },
-  {
-   "slug": "wanderway",
-   "status": "Completed",
-   "title": "WanderWay",
-   "kind": "Full-Stack \u00b7 MERN",
-   "blurb": "A full-stack travel platform built on the MERN stack.",
-   "story": "A travel platform for discovering and planning trips, built end to end with the MERN stack.",
-   "highlights": [
-    "Full-stack MERN architecture",
-    "REST API design",
-    "Responsive React UI"
-   ],
-   "stack": [
-    "MongoDB",
-    "Express",
-    "React",
-    "Node.js"
-   ],
-   "stats": {
-    "Stack": "MERN",
-    "Type": "Platform",
-    "Scope": "Full-stack"
-   },
-   "featured": false,
-   "links": {
-    "code": "#"
-   }
-  },
-  {
-   "slug": "donation-platform",
-   "status": "Shipped \u00b7 Internship",
-   "title": "Donation Platform",
-   "kind": "Web \u00b7 Payments",
-   "blurb": "Web app with Razorpay payment processing, built during an internship at The Sparks Foundation.",
-   "story": "Built during my internship at The Sparks Foundation: a donation web app with secure Razorpay checkout.",
-   "highlights": [
-    "Razorpay payment integration",
-    "Payment verification flow",
-    "Internship delivery"
-   ],
-   "stack": [
-    "JavaScript",
-    "Node.js",
-    "Razorpay",
-    "Web"
-   ],
-   "stats": {
-    "Payments": "Razorpay",
-    "Where": "Sparks Fdn",
-    "Type": "Internship"
-   },
-   "featured": false,
-   "links": {
-    "code": "#"
-   }
-  }
- ],
- "timeline": [
-  {
-   "year": "now",
-   "ref": "HEAD -> main",
-   "title": "Software Engineer \u2014 ICICI Lombard",
-   "text": "Built the live travel-insurance buying chatbot. Building across full-stack, cloud, data and autonomous systems."
-  },
-  {
-   "year": "research",
-   "ref": "tag: ieee",
-   "title": "IEEE Publication \u2014 PetroConnect",
-   "text": "IoT automated fueling system, published in IEEE."
-  },
-  {
-   "year": "internship",
-   "ref": "",
-   "title": "The Sparks Foundation",
-   "text": "Built a Razorpay-powered donation platform."
-  },
-  {
-   "year": "degree",
-   "ref": "origin",
-   "title": "B.Tech, Electronics & Telecommunication",
-   "text": "The hardware-meets-software foundation."
-  }
- ],
- "hobbies": [
-  {
-   "icon": "football",
-   "title": "Football",
-   "text": "Playing and watching. Teamwork and positioning carry over to how I build systems."
-  },
-  {
-   "icon": "gym",
-   "title": "Fitness & Gym",
-   "text": "Consistency over intensity \u2014 the same discipline I bring to shipping code."
-  },
-  {
-   "icon": "tech",
-   "title": "Emerging Tech",
-   "text": "Always tinkering with the next thing in AI, robotics and software engineering."
-  }
- ]
+    "profile": {
+        "name": "Aditya Rane",
+        "role": "Software Engineer",
+        "company": "ICICI Lombard",
+        "location": "Mumbai, India",
+        "intro": "Software engineer at ICICI Lombard, where I built the chatbot customers use to buy travel insurance on icicilombard.com. My other work includes an IEEE-published IoT fueling system and a drone swarm project built on ROS 2 and PX4.",
+        "about": [
+            "I have a B.Tech in Electronics and Telecommunication Engineering, and my work has covered full-stack and backend development, cloud and data engineering, IoT and embedded systems.",
+            "I am most interested in system design, distributed architectures, agentic AI and multi-agent systems, and autonomous robotics. I like understanding how a system works end to end before I build it."
+        ],
+        "outside": "Outside work I play football, train at the gym, and follow robotics and AI research.",
+        "facts": [
+            [
+                "Location",
+                "Mumbai, India"
+            ],
+            [
+                "Education",
+                "B.Tech, Electronics and Telecommunication"
+            ],
+            [
+                "Publication",
+                "PetroConnect, published in IEEE"
+            ]
+        ],
+        "links": {
+            "github": "https://github.com/raneaditya012-cmd",
+            "linkedin": "https://www.linkedin.com/in/aditya-rane1012",
+            "email": "raneaditya012@gmail.com"
+        }
+    },
+    "experience": [
+        {
+            "label": "Current",
+            "title": "Software Engineer",
+            "org": "ICICI Lombard",
+            "text": "Built the travel insurance chatbot on icicilombard.com, which takes customers through buying a policy in a conversation.",
+            "link": {
+                "label": "See it live",
+                "href": "https://www.icicilombard.com/travel-buying-chat/conversation"
+            }
+        },
+        {
+            "label": "Internship",
+            "title": "Intern",
+            "org": "The Sparks Foundation",
+            "text": "Built a donation web application with Razorpay payment processing.",
+            "link": null
+        },
+        {
+            "label": "Education",
+            "title": "B.Tech, Electronics and Telecommunication Engineering",
+            "org": "",
+            "text": "PetroConnect, an IoT fueling system, was published in IEEE.",
+            "link": null
+        }
+    ],
+    "skills": [
+        {
+            "group": "Languages",
+            "items": [
+                "Python",
+                "C++",
+                "JavaScript"
+            ]
+        },
+        {
+            "group": "Web",
+            "items": [
+                "React",
+                "Node.js",
+                "Express"
+            ]
+        },
+        {
+            "group": "Data",
+            "items": [
+                "MongoDB",
+                "PostgreSQL",
+                "ETL pipelines",
+                "Data warehousing"
+            ]
+        },
+        {
+            "group": "Cloud",
+            "items": [
+                "AWS"
+            ]
+        },
+        {
+            "group": "Embedded and IoT",
+            "items": [
+                "ESP32",
+                "RFID"
+            ]
+        },
+        {
+            "group": "Robotics",
+            "items": [
+                "ROS 2",
+                "PX4",
+                "Gazebo"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "slug": "travel-insurance-chatbot",
+            "title": "Travel Insurance Chatbot",
+            "kind": "ICICI Lombard",
+            "status": "Live",
+            "blurb": "A chatbot on icicilombard.com that takes customers through buying a travel insurance policy.",
+            "overview": "I built this as a software engineer at ICICI Lombard. Instead of a long form, the customer answers questions in a conversation and finishes with a booked travel insurance policy. It is live on the company website.",
+            "highlights": [
+                "Conversational flow for buying a travel insurance policy",
+                "Running in production on icicilombard.com"
+            ],
+            "stack": [],
+            "links": {
+                "Open the chatbot": "https://www.icicilombard.com/travel-buying-chat/conversation"
+            }
+        },
+        {
+            "slug": "petroconnect",
+            "title": "PetroConnect",
+            "kind": "IoT and embedded",
+            "status": "Published in IEEE",
+            "blurb": "An automated fueling system with RFID authentication, ESP32 hardware and a MERN web application.",
+            "overview": "PetroConnect is an IoT-based automated fueling system. A customer is authenticated with an RFID tag, an ESP32 controls the hardware, the device communicates with the server over a secured channel, and a MERN-stack web application manages the system. The work was published in IEEE.",
+            "highlights": [
+                "RFID authentication",
+                "ESP32 embedded hardware",
+                "Secure device communication",
+                "MERN-stack web application"
+            ],
+            "stack": [
+                "ESP32",
+                "RFID",
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+            ],
+            "links": {}
+        },
+        {
+            "slug": "aegis-mas",
+            "title": "Aegis-MAS",
+            "kind": "Autonomous robotics",
+            "status": "In progress",
+            "blurb": "An autonomous drone swarm project exploring multi-agent communication and coordination.",
+            "overview": "Aegis-MAS is an ongoing drone swarm initiative. It explores how multiple agents communicate, make decisions without a central controller, plan missions and coordinate autonomously, using ROS 2 and PX4 with simulation in Gazebo.",
+            "highlights": [
+                "Multi-agent communication",
+                "Distributed decision-making",
+                "Mission planning",
+                "Autonomous coordination"
+            ],
+            "stack": [
+                "ROS 2",
+                "PX4",
+                "Gazebo"
+            ],
+            "links": {}
+        },
+        {
+            "slug": "customer-behaviour-analytics",
+            "title": "Customer Behaviour Analytics",
+            "kind": "Data engineering",
+            "status": "",
+            "blurb": "An AWS data engineering project covering ingestion, ETL pipelines, warehousing and analytics.",
+            "overview": "A data engineering project on AWS. Data is ingested, transformed through ETL pipelines, loaded into a data warehouse and used for analytics on customer behaviour.",
+            "highlights": [
+                "Data ingestion",
+                "ETL pipelines",
+                "Data warehousing",
+                "Analytics"
+            ],
+            "stack": [
+                "AWS"
+            ],
+            "links": {}
+        },
+        {
+            "slug": "wanderway",
+            "title": "WanderWay",
+            "kind": "Full-stack web",
+            "status": "",
+            "blurb": "A full-stack travel platform built on the MERN stack.",
+            "overview": "WanderWay is a travel platform built end to end with MongoDB, Express, React and Node.js.",
+            "highlights": [],
+            "stack": [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+            ],
+            "links": {}
+        },
+        {
+            "slug": "donation-platform",
+            "title": "Donation Platform",
+            "kind": "The Sparks Foundation",
+            "status": "",
+            "blurb": "A donation web application with Razorpay payment processing, built during an internship.",
+            "overview": "A web application for accepting donations, with payments handled through Razorpay. I built it during my internship at The Sparks Foundation.",
+            "highlights": [],
+            "stack": [
+                "Razorpay"
+            ],
+            "links": {}
+        }
+    ]
 }

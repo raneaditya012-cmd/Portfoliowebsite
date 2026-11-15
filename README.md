@@ -1,35 +1,34 @@
 # Aditya Rane — Portfolio
 
-Next.js 14 (App Router, Tailwind, Framer Motion, Lenis) + FastAPI. Minimal, neutral, developer-centric.
+Next.js 14 (App Router, Tailwind) frontend with a small FastAPI content API.
 
-## Run
+Live: https://aditya-rane-portfolio.vercel.app
+
+## Run locally
 ```bash
-# terminal 1 — API
+cd frontend && npm install && npm run dev      # http://localhost:3000
+```
+The site renders from `frontend/lib/fallback.json`, so it needs nothing else. To serve content from the API instead:
+```bash
 cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/uvicorn main:app --port 8000
-
-# terminal 2 — site
-cd frontend && npm install && npm run dev     # http://localhost:3000
+API_URL=http://127.0.0.1:8000 npm run dev      # from frontend/
 ```
-The site proxies `/api/*` to FastAPI (`API_URL`, default http://127.0.0.1:8000) and falls back to
-`frontend/lib/fallback.json` if the API is down, so it can also be deployed alone (e.g. Vercel).
 
-## Make it yours
-- Content: `backend/data.py` (profile, skills, projects, timeline, hobbies). After editing, refresh the fallback:
-  `cd frontend && python3 -c "import sys,json;sys.path.insert(0,'../backend');import data;json.dump({'profile':data.PROFILE,'skills':data.SKILLS,'projects':data.PROJECTS,'timeline':data.TIMELINE,'hobbies':data.HOBBIES},open('lib/fallback.json','w'),indent=1)"`
-- TODO: real GitHub / LinkedIn / email in `PROFILE["links"]`, project `links` (`#` = hidden), drop `resume.pdf` in `frontend/public/`.
-- Contact messages are appended to `backend/messages.jsonl`.
-- Deploy: set `API_URL` (frontend) and add your domain to CORS in `backend/main.py`.
+## Editing content
+All copy lives in `backend/data.py`. After editing, refresh the bundled copy:
+```bash
+cd backend && .venv/bin/uvicorn main:app --port 8000 &
+curl -s localhost:8000/api/content | python3 -m json.tool > ../frontend/lib/fallback.json
+```
 
-## Highlights
-Terminal hero that types an intro · ⌘K command palette · IST clock + scroll progress in the nav · stack as a grouped grid ·
-animated SVG illustration per project (`components/ProjectArt.tsx`) · sticky stacking featured projects ·
-experience as a `git log` that draws on scroll · contact form with a live request/response preview ·
-keepy-uppy mini-game in the hobbies section · smooth scrolling · respects `prefers-reduced-motion`.
+## Design system
+Defined in `frontend/tailwind.config.ts` and `frontend/app/globals.css`.
+- **Type:** IBM Plex Sans and IBM Plex Mono, one fixed scale (12, 14, 16, 18, 24, 32, 48, 64).
+- **Spacing:** 8-point steps; every section uses the same `.section` and `.section-grid`.
+- **Colour:** neutrals plus one accent (`accent`), used only for interactive states.
+- **Shape:** one radius (8px), borders instead of shadows.
+- **Motion:** colour transitions on hover only.
 
-Theme colours live in `frontend/tailwind.config.ts` (`bg`, `surface`, `fg`, `muted`, `accent`).
-
-## Deploy (free)
-1. **API → Render:** New → Blueprint → pick this repo (uses `render.yaml`). Copy the service URL.
-2. **Site → Vercel:** Import this repo, set *Root Directory* to `frontend`, add env var `API_URL` = the Render URL, deploy.
-   (The site also works without the API — content falls back to `lib/fallback.json`; only the contact form needs it.)
+## Deploy
+Vercel: import the repo with Root Directory `frontend`. `render.yaml` deploys the API on Render if you want it; set `API_URL` in Vercel to use it.
