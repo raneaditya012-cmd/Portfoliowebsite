@@ -8,7 +8,7 @@ import { getContent } from "@/lib/api";
 const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-sans" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-mono" });
 
-const description = "Software engineer at ICICI Lombard in Mumbai. Built the travel insurance chatbot on icicilombard.com; also an IEEE-published IoT fueling system and a ROS 2 drone swarm project.";
+const description = "Software engineer at ICICI Lombard in Mumbai, working across web, cloud and embedded systems, with a focus on AI, robotics and distributed systems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aditya-rane-portfolio.vercel.app"),

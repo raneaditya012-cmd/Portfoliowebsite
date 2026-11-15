@@ -6,9 +6,9 @@ PROFILE = {
     "company": "ICICI Lombard",
     "location": "Mumbai, India",
     "intro": (
-        "Software engineer at ICICI Lombard, where I built the chatbot customers use to buy "
-        "travel insurance on icicilombard.com. My other work includes an IEEE-published IoT "
-        "fueling system and a drone swarm project built on ROS 2 and PX4."
+        "Software engineer at ICICI Lombard in Mumbai. I build software across the stack, from web "
+        "and cloud to embedded systems, and I am especially interested in AI, robotics and "
+        "distributed systems."
     ),
     "about": [
         "I have a B.Tech in Electronics and Telecommunication Engineering, and my work has covered "
