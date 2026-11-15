@@ -2,7 +2,7 @@
 
 Next.js 14 (App Router, Tailwind) frontend with a small FastAPI content API.
 
-Live: https://aditya-rane-portfolio.vercel.app
+Live: https://aditya-rane.vercel.app
 
 ## Run locally
 ```bash

@@ -12,7 +12,7 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: "--f
 const description = "Software engineer at ICICI Lombard in Mumbai, working across web, cloud and embedded systems, with a focus on AI, robotics and distributed systems.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aditya-rane-portfolio.vercel.app"),
+  metadataBase: new URL("https://aditya-rane.vercel.app"),
   title: { default: "Aditya Rane, Software Engineer", template: "%s | Aditya Rane" },
   description,
   openGraph: { title: "Aditya Rane, Software Engineer", description, type: "website", url: "/" },
