@@ -1,13 +1,12 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import CopyEmail from "@/components/CopyEmail";
 import AiStoryCard from "@/components/AiStoryCard";
-import Game from "@/components/Game";
 import ProjectCard from "@/components/ProjectCard";
 import { getAiStory } from "@/lib/aiNews";
 import { getContent } from "@/lib/api";
 
 export default async function Home() {
-  const { profile, experience, skills, projects, game } = await getContent();
+  const { profile, experience, skills, projects } = await getContent();
   const { links } = profile;
   const story = await getAiStory();
 
@@ -89,19 +88,14 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="play" className="section">
-        <div className="wrap section-grid">
-          <div>
-            <h2 className="section-title">Play</h2>
+      {story && (
+        <section id="ai" className="section">
+          <div className="wrap section-grid">
+            <h2 className="section-title">AI today</h2>
+            <div className="max-w-xl"><AiStoryCard story={story} email={links.email} /></div>
           </div>
-          <div className="max-w-xl">
-            <h3 className="text-xl">{game.title}</h3>
-            <p className="mt-2 mb-6 text-muted">{game.intro}</p>
-            {story && <AiStoryCard story={story} email={links.email} />}
-            <Game game={game} email={links.email} />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section id="contact" className="section">
         <div className="wrap section-grid">

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from data import EXPERIENCE, GAME, PROFILE, PROJECTS, SKILLS
+from data import EXPERIENCE, PROFILE, PROJECTS, SKILLS
 
 app = FastAPI(title="Aditya Rane Portfolio API", version="2.0.0")
 app.add_middleware(
@@ -21,7 +21,7 @@ def health():
 @app.get("/api/content")
 def content():
     """Everything the site renders, in one request."""
-    return {"profile": PROFILE, "experience": EXPERIENCE, "skills": SKILLS, "projects": PROJECTS, "game": GAME}
+    return {"profile": PROFILE, "experience": EXPERIENCE, "skills": SKILLS, "projects": PROJECTS}
 
 
 @app.get("/api/projects/{slug}")

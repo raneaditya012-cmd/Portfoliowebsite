@@ -9,11 +9,11 @@ const LINKS = [
   { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills" },
   { href: "/#about", label: "About" },
-  { href: "/#play", label: "Play" },
   { href: "/#contact", label: "Contact" },
 ];
 
-export default function Nav({ items }: { items: PaletteItem[] }) {
+export default function Nav({ items, showAi }: { items: PaletteItem[]; showAi: boolean }) {
+  const links = showAi ? [...LINKS.slice(0, 4), { href: "/#ai", label: "AI today" }, LINKS[4]] : LINKS;
   const pathname = usePathname();
   const [palette, setPalette] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -33,7 +33,7 @@ export default function Nav({ items }: { items: PaletteItem[] }) {
         <nav className="wrap flex h-14 items-center justify-between" aria-label="Main">
           <Link href="/" className="text-base font-semibold">Aditya Rane</Link>
           <ul className="hidden items-center gap-6 md:flex">
-            {LINKS.map((l) => (
+            {links.map((l) => (
               <li key={l.href}><Link href={l.href} className="text-sm text-muted transition-colors duration-150 hover:text-fg">{l.label}</Link></li>
             ))}
             <li><button onClick={() => setPalette(true)} className="tag transition-colors duration-150 hover:text-fg" aria-label="Open quick navigation">Ctrl K</button></li>
@@ -42,7 +42,7 @@ export default function Nav({ items }: { items: PaletteItem[] }) {
         </nav>
         {menu && (
           <ul id="mobile-menu" className="wrap border-t border-line py-2 md:hidden">
-            {LINKS.map((l) => (
+            {links.map((l) => (
               <li key={l.href}><Link href={l.href} onClick={() => setMenu(false)} className="flex h-12 items-center text-base text-muted hover:text-fg">{l.label}</Link></li>
             ))}
           </ul>

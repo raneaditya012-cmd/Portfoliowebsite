@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { getAiStory } from "@/lib/aiNews";
 import { getContent } from "@/lib/api";
 
 const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-sans" });
@@ -21,12 +22,13 @@ export const viewport: Viewport = { themeColor: "#0c0c0d" };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { profile, projects } = await getContent();
+  const showAi = (await getAiStory()) !== null;
   const items = [
     { label: "Experience", hint: "Section", href: "/#experience" },
     { label: "Projects", hint: "Section", href: "/#projects" },
     { label: "Skills", hint: "Section", href: "/#skills" },
     { label: "About", hint: "Section", href: "/#about" },
-    { label: "Play: two truths and a lie", hint: "Game", href: "/#play" },
+    ...(showAi ? [{ label: "AI today", hint: "Section", href: "/#ai" }] : []),
     { label: "Contact", hint: "Section", href: "/#contact" },
     ...projects.map((p) => ({ label: p.title, hint: "Project", href: `/projects/${p.slug}` })),
     { label: "GitHub", hint: "Link", href: profile.links.github, external: true },
@@ -36,7 +38,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body>
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-6 focus:top-2 focus:z-50 focus:rounded focus:bg-fg focus:px-4 focus:py-2 focus:text-bg">Skip to content</a>
-        <Nav items={items} />
+        <Nav items={items} showAi={showAi} />
         <main id="main">{children}</main>
         <Footer profile={profile} />
       </body>
