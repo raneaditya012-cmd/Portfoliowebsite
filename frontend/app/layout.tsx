@@ -26,6 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     { label: "Projects", hint: "Section", href: "/#projects" },
     { label: "Skills", hint: "Section", href: "/#skills" },
     { label: "About", hint: "Section", href: "/#about" },
+    { label: "Play: two truths and a lie", hint: "Game", href: "/#play" },
     { label: "Contact", hint: "Section", href: "/#contact" },
     ...projects.map((p) => ({ label: p.title, hint: "Project", href: `/projects/${p.slug}` })),
     { label: "GitHub", hint: "Link", href: profile.links.github, external: true },

@@ -1,10 +1,11 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import CopyEmail from "@/components/CopyEmail";
+import Game from "@/components/Game";
 import ProjectCard from "@/components/ProjectCard";
 import { getContent } from "@/lib/api";
 
 export default async function Home() {
-  const { profile, experience, skills, projects } = await getContent();
+  const { profile, experience, skills, projects, game } = await getContent();
   const { links } = profile;
 
   return (
@@ -81,6 +82,19 @@ export default async function Home() {
           <div className="max-w-xl space-y-4 text-lg">
             {profile.about.map((p) => <p key={p}>{p}</p>)}
             <p className="text-muted">{profile.outside}</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="play" className="section">
+        <div className="wrap section-grid">
+          <div>
+            <h2 className="section-title">Play</h2>
+          </div>
+          <div className="max-w-xl">
+            <h3 className="text-xl">{game.title}</h3>
+            <p className="mt-2 mb-6 text-muted">{game.intro}</p>
+            <Game game={game} email={links.email} />
           </div>
         </div>
       </section>

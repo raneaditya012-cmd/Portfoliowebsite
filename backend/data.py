@@ -115,3 +115,47 @@ PROJECTS = [
         "links": {},
     },
 ]
+
+# Two truths and a lie. In each round exactly one statement is false.
+GAME = {
+    "title": "Two truths and a lie",
+    "intro": "Three statements about me, one of them false. Spot it, then tell me a little about yourself in return.",
+    "rounds": [
+        {
+            "statements": [
+                {"text": "I studied Electronics and Telecommunication Engineering.", "true": True},
+                {"text": "The chatbot I built at ICICI Lombard is used to book health insurance.", "true": False},
+                {"text": "I work as a software engineer in Mumbai.", "true": True},
+            ],
+            "reveal": "The chatbot helps customers buy travel insurance, and it is live on icicilombard.com.",
+            "ask": {"question": "What kind of work do you do?", "options": ["Engineering", "Design", "Product", "Recruiting", "Studying", "Something else"]},
+        },
+        {
+            "statements": [
+                {"text": "PetroConnect's web application is built with Django.", "true": False},
+                {"text": "PetroConnect uses RFID to authenticate users.", "true": True},
+                {"text": "PetroConnect runs on ESP32 hardware.", "true": True},
+            ],
+            "reveal": "The web application is a MERN-stack app, and the PetroConnect paper was published in IEEE.",
+            "ask": {"question": "What is your go-to programming language?", "options": ["Python", "JavaScript or TypeScript", "Java or Kotlin", "C or C++", "Go or Rust", "Something else"]},
+        },
+        {
+            "statements": [
+                {"text": "Aegis-MAS is a drone swarm project.", "true": True},
+                {"text": "Aegis-MAS uses ROS 2, PX4 and Gazebo.", "true": True},
+                {"text": "Aegis-MAS is built around one central computer that controls every drone.", "true": False},
+            ],
+            "reveal": "The project explores distributed decision-making and coordination between agents, not central control.",
+            "ask": {"question": "Which area interests you most right now?", "options": ["AI and agents", "Robotics", "Cloud and infrastructure", "Web and frontend", "Data", "Security"]},
+        },
+        {
+            "statements": [
+                {"text": "I have never worked with AWS.", "true": False},
+                {"text": "I built a donation platform with Razorpay payments during an internship.", "true": True},
+                {"text": "I built a travel platform called WanderWay on the MERN stack.", "true": True},
+            ],
+            "reveal": "I built a data engineering project on AWS covering ingestion, ETL pipelines, warehousing and analytics.",
+            "ask": {"question": "Outside work, what do you do to unwind?", "options": ["Football", "Gym", "Both", "Neither"]},
+        },
+    ],
+}

@@ -9,4 +9,7 @@ export type Project = {
   slug: string; title: string; kind: string; status: string; blurb: string; overview: string;
   highlights: string[]; stack: string[]; links: Record<string, string>;
 };
-export type Content = { profile: Profile; experience: Experience[]; skills: SkillGroup[]; projects: Project[] };
+export type Statement = { text: string; true: boolean };
+export type Round = { statements: Statement[]; reveal: string; ask: { question: string; options: string[] } };
+export type Game = { title: string; intro: string; rounds: Round[] };
+export type Content = { profile: Profile; experience: Experience[]; skills: SkillGroup[]; projects: Project[]; game: Game };
