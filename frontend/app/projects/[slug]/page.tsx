@@ -10,7 +10,9 @@ export const generateStaticParams = () => allSlugs().map((slug) => ({ slug }));
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const p = (await getContent()).projects.find((x) => x.slug === params.slug);
-  return p ? { title: p.title, description: p.blurb } : { title: "Project not found" };
+  return p
+    ? { title: p.title, description: p.blurb, alternates: { canonical: `/projects/${p.slug}` }, openGraph: { title: `${p.title} | Aditya Rane`, description: p.blurb, type: "article", url: `/projects/${p.slug}` } }
+    : { title: "Project not found", robots: { index: false } };
 }
 
 export default async function ProjectPage({ params }: { params: { slug: string } }) {
